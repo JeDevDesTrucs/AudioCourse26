@@ -57,7 +57,7 @@ static const float kFilterColors[FILTER_NUM_MODES][3] = {
 // ─── Filter range (Encoder controls cutoff) ──────────────────────────────────
 static const float kCutoffMin = 20.0f;
 static const float kCutoffMax = 18000.0f;
-// Resonance is fixed here — feel free to map knob to it later!
+// Filter resonance is fixed here, try to change it and see what happen [0.0 - 1.0]
 static const float kResonance = 0.4f;
 
 // ─── State variable filter (SVF) — handles LP/HP/BP/Notch ───────────────────
