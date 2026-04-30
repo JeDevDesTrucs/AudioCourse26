@@ -9,7 +9,7 @@ Oscillator osc;
 
 // Frequency range mapped to Knob 1
 static const float kFreqMin = 20.0f;
-static const float kFreqMax = 2000.0f;
+static const float kFreqMax = 2000.0f; // try out different range, you can test your hearing limit with a >20KHz sine ;)
 
 void AudioCallback(AudioHandle::InputBuffer  in,
                    AudioHandle::OutputBuffer out,
@@ -33,12 +33,12 @@ void AudioCallback(AudioHandle::InputBuffer  in,
 int main()
 {
     hw.Init();
-    hw.SetAudioBlockSize(4); // small block for low latency
+    hw.SetAudioBlockSize(4); // smoll block for  smoll latency
 
     float sample_rate = hw.AudioSampleRate();
 
     osc.Init(sample_rate);
-    osc.SetWaveform(Oscillator::WAVE_SIN);
+    osc.SetWaveform(Oscillator::WAVE_SIN); // try out other waveforms !
     osc.SetFreq(220.0f);  // default A3
     osc.SetAmp(0.7f);
 
